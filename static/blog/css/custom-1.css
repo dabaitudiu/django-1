@@ -901,5 +901,38 @@ img {
 }
 
 .current a {
-    color: red;
+    color: black;
 }
+
+.pagination-b {margin-top: 25px; text-align: center;}
+ .pagination-b a {
+   display: inline-block;
+   line-height: 38px;
+   padding: 0 15px;
+   margin-right: 4px;
+   text-align: center;
+   background-color: #fff;
+   user-select: none;
+   cursor: pointer;
+   font-size: 14px;
+   border: 1px solid #d7dde4;
+   border-radius: 4px;
+   transition: all .2s ease-in-out;
+ }
+ .pagination-b a:hover {
+   color: #A161BF;
+   border: 1px solid #A161BF;
+ }
+ .pagination-b .current-page {color: white; background-color: greenyellow;}
+ .pagination-b .current-page:hover {
+   color: white;
+   border: 1px solid #A161BF;
+ }
+ .pagination-b span {
+   display: inline-block;
+   font-size: 20px;
+   line-height: 38px;
+   padding: 0 8px;
+   margin-right: 4px;
+ }
+
