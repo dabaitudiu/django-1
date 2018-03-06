@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'blog/css/pace.css' %}">
     <link rel="stylesheet" href="{% static 'blog/css/custom.css' %}">
-    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="{% static 'blog/css/pagination.css' %}"> -->
 
 
@@ -36,56 +35,36 @@
     <li class="navfirst-li" style="float:right"><a class="nfa" href="">注册</a></li>
     <li class="navfirst-li" style="float:right"><a class="nfa" href="">登录</a></li>
   </ul>
-<div class="container">
-    <header id="site-header">
-        <div class="row">
-            <div class="col-md-4 col-sm-5 col-xs-8">
-                <div class="logo">
-                    <h1><a href="/">Flappy Rabbit</a></h1>
+  <div class="container-fluid">
+      <!-- <header id="site-header"> -->
+          <div class="row gg">
+              <div class="col-md-4 col-sm-5 col-xs-8">
+                  <div class="logo gg-5">
+                      <h1><a href="index.html"><b>Flappy Dragon</a></h1>
+                  </div>
+              </div><!-- col-md-4 -->
+              <div class="col-md-8 col-sm-7 col-xs-4">
+                <div class="search bar3">
+                  <form>
+                    <input type="text" placeholder="请输入您要搜索的内容...">
+                    <button type="submit"></button>
+                  </form>
                 </div>
-            </div><!-- col-md-4 -->
-            <div class="col-md-8 col-sm-7 col-xs-4">
-                <nav class="main-nav" role="navigation">
-                    <div class="navbar-header">
-                        <button type="button" id="trigger-overlay" class="navbar-toggle">
-                            <span class="ion-navicon"></span>
-                        </button>
-                    </div>
+              </div><!-- col-md-8 -->
+          </div>
+      <!-- </header> -->
+        <div class="mybar"></div>
 
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="cl-effect-11"><a href="/" data-hover="首页">首页</a></li>
-                            <li class="cl-effect-11"><a href="http://dabaitudiu.github.io" data-hover="博客">博客s</a></li>
-                            <li class="cl-effect-11"><a href="http://dabaitudiu.github.io" data-hover="关于">关于</a></li>
-                            <li class="cl-effect-11"><a href="http://dabaitudiu.github.io" data-hover="联系">联系</a></li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </nav>
-                <div id="header-search-box">
-                    <a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
-                    <div id="search-form" class="search-form">
-                        <form role="search" method="get" id="searchform" action="#">
-                            <input type="search" placeholder="搜索" required>
-                            <button type="submit"><span class="ion-ios-search-strong"></span></button>
-                        </form>
-                    </div>
-                </div>
-            </div><!-- col-md-8 -->
-        </div>
-    </header>
-</div>
-<div class="copyrights">Collect from <a href="http://www.cssmoban.com/">网页模板</a></div>
-<div class="copyrights">Modified by <a href="http://www.landonlisbon.com">个人网站2</a></div>
-
+  </div>
 <div class="content-body">
-    <div class="container">
-        <div class="row">
-            <main class="col-md-8">
+    <div class="container-fluid">
+        <div class="row gg-2">
+            <main class="col-md-9">
                 {% block main %}
                 {% endblock main %}
             </main>
-            <aside class="col-md-4">
-              <div class="widget widget-recent-posts">
+            <aside class="col-md-3">
+              <div class="widget widget-recent-posts gg-4">
                   <h3 class="widget-title">最新文章</h3>
                   {% get_recent_posts as recent_post_list %}
                   <ul>
@@ -98,7 +77,7 @@
                     {% endfor %}
                   </ul>
               </div>
-              <div class="widget widget-archives">
+              <div class="widget widget-archives gg-4">
                   <h3 class="widget-title">归档</h3>
                   {% archives as date_list %}
                   <ul>
@@ -112,7 +91,7 @@
                   </ul>
               </div>
 
-              <div class="widget widget-category">
+              <div class="widget widget-category gg-4">
                   <h3 class="widget-title">分类</h3>
                   {% get_categores as category_list %}
                   <ul>
@@ -127,7 +106,7 @@
                   </ul>
               </div>
 
-              <div class="widget widget-tag-cloud">
+              <div class="widget widget-tag-cloud gg-4">
                   <h3 class="widget-title">标签云</h3>
                   {% get_tags as tag_list %}
                   <ul>
@@ -141,7 +120,7 @@
                     {% endfor %}
                   </ul>
               </div>
-              <div class="rss">
+              <div class="rss gg-4">
                   <a href=""><span class="ion-social-rss-outline"></span> RSS 订阅</a>
               </div>
             </aside>
