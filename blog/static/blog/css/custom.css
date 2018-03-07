@@ -234,7 +234,7 @@ img {
 }
 
 .entry-content {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.9;
     font-weight: 300;
     color: #000;
@@ -919,7 +919,7 @@ img {
 }
 
 .gg-4 {
-  margin-top:10px;
+  margin-top:30px;
   background-color: #f1f1f1;
   padding: 10px;
   border-bottom: 2px solid #ffffff;
@@ -941,6 +941,10 @@ img {
   float:left;
 }
 
+.navfirst-li:first-child {
+  margin-left: 10px;
+}
+
 .navfirst-li .nfa:hover {
   background-color: #f2f2f2;
   color: #000;
@@ -952,10 +956,11 @@ img {
   padding: 0;
   background-color: #555;
   overflow:hidden;
-  /* border-bottom: 1px solid #808080; */
-  /* width:100%;
-  height: 25%; */
 }
+
+
+
+
 .div_1 {
   width: 100%;
   height: 80px;
@@ -982,41 +987,41 @@ img {
   overflow:hidden;
 }
 
-.bar3 {background: #F9F0DA;}
-.bar3 form {background: #A3D0C3;}
-.bar3 input, .bar3 button {
+.bar3 {background: #F9F0DA;margin-left: 13px;}
+.bar3 .bar3-form {background: #A3D0C3;}
+.bar3 .bar3-input, .bar3 .bar3-button {
   background: transparent;
 }
-.bar3 button {
+.bar3 .bar3-button {
   top: 0;
   right: 0;
 }
-.bar3 button:before {
+.bar3 .bar3-button:before {
   content: "\f002";
   font-family: FontAwesome;
   font-size: 16px;
   color: #F9F0DA;
 }
-form {
+.bar3-form {
   position: relative;
-  width: 33.33%;
+  width: 100%;
   margin: 0 auto;
-  float:right;
+  /* float:right; */
 }
 
-input, button {
+.bar3-input, .bar3-button {
   border: none;
   outline: none;
 }
 
-input {
-  left:80%;
+.bar3-input {
+  /* left:80%; */
   width: 100%;
   height: 42px;
   padding-left: 13px;
 }
 
-button {
+.bar3-button {
   height: 42px;
   width: 42px;
   cursor: pointer;
@@ -1062,4 +1067,28 @@ div.search {padding: 20px 0;}
 .mycenter {
   text-align: center;
   margin-top:25px;
+}
+
+.logo-box {
+  width: 80%;
+  /* text-align: center; */
+  padding-left: 15px;
+  /* background-color: orange; */
+}
+.logo-font {
+  font-size: 50px;
+  font-family: 'Caveat', cursive;
+  width: 100%;
+  /* color: #ff8000; */
+}
+
+.underbar {
+  margin-top: 20px;
+  margin-left: 25px;
+  background-color: #f1f1f1;
+  width: 12%;
+  height: 40px;
+  padding-top:8px;
+  padding-left: 14px;
+  font-size: 20px;
 }

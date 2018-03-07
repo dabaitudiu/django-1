@@ -11,6 +11,7 @@ def post_comment(request, post_pk):
         if form.is_valid():
             comment = form.save(commit=False)
             comment.post = post
+            comment.review += 1
             comment.save()
             return redirect(post)
     else:
