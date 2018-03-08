@@ -6,6 +6,5 @@
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 [![Bar](http://progressed.io/bar/30?title=progress)](https://www.python.org/)
 
-http://progressed.io/bar/91
 * 第三次更新：更新阅读量，摘要.
 * 2018/3/8：优化移动端(按钮，排版).
