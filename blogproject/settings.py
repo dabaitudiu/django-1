@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'l^b_j49cx0))-m_)z=48(p_)7vfgiqa8l+*rfhy@l1h$mm6ytu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True;
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost','159.65.134.238','flappydragon.com']
 
