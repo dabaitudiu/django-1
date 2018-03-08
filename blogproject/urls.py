@@ -20,4 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('blog.urls', namespace='blog')),
     url(r'', include('comments.urls')),
+    # url(r'^account/', include('account.urls', namespace='account', app_name='account')),
+    url(r'^search/', include('haystack.urls')),
 ]

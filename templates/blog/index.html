@@ -3,6 +3,9 @@
 <div class="underbar">
   <div class="bar-text">热门精选:</div>
 </div>
+{% if error_msg %}
+    <p>{{ error_msg }}</p>
+  {% endif %}
     {% for post in post_list %}
     <article class="post post-{{ post.pk }}">
         <header class="entry-header">

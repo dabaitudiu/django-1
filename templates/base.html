@@ -4,6 +4,11 @@
 <html>
 <head>
   <title>Flappy Dragon</title>
+  <style>
+    span.highlighted {
+          color: red;
+      }
+  </style>
 
   <!-- meta -->
   <meta charset="UTF-8">
@@ -40,12 +45,12 @@
 
 <body>
   <ul class="navfirst-ul">
-    <li class="navfirst-li"><a class="nfa" href="">首页</a></li>
+    <li class="navfirst-li"><a class="nfa" href="/">首页</a></li>
     <li class="navfirst-li"><a class="nfa" href="">日记</a></li>
-    <li class="navfirst-li"><a class="nfa" href="">博客</a></li>
+    <li class="navfirst-li"><a class="nfa" href="http://dabaitudiu.github.io">博客</a></li>
     <li class="navfirst-li"><a class="nfa" href="">小组</a></li>
     <li class="navfirst-li"><a class="nfa" href="">文章</a></li>
-    <li class="navfirst-li"><a class="nfa" href="">关于</a></li>
+    <li class="navfirst-li"><a class="nfa" href="http://github.com/dabaitudiu">关于</a></li>
     <li class="navfirst-li" style="float:right"><a class="nfa" href="">注册</a></li>
     <li class="navfirst-li" style="float:right"><a class="nfa" href="">登录</a></li>
   </ul>
@@ -68,8 +73,8 @@
       <!-- col-md-8 -->
       <div class="col-md-3 col-sm-3 col-xs-6" style="float:right">
         <div class="search bar3">
-          <form class="bar3-form">
-            <input class="bar3-input form-control" type="text" placeholder="请输入要搜索的内容...">
+          <form class="bar3-form" role="search" method="get" id="searchform" action="{% url 'haystack_search' %}">
+            <input class="bar3-input form-control" name="q" type="text" placeholder="请输入要搜索的内容..." required>
             <button class="bar3-button" type="submit"></button>
           </form>
         </div>
