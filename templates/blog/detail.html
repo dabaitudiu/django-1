@@ -2,7 +2,7 @@
 {% block main %}
     <article class="post post-{{ post.pk }}">
         <header class="entry-header">
-            <h4><a href="/">返回首页</a></h4>
+            <h4 class="backtomain"><a href="/">返回首页</a></h4>
             <h1 class="entry-title">
                 <a href="{{ post.get_absolute_url }}">{{ post.title }}TEST</a>
             </h1>
@@ -15,7 +15,7 @@
                 <span class="views-count"><a href="#">{{ post.views }} 阅读</a></span>
             </div>
         </header>
-        <div class="entry-content clearfix">
+        <div class="entry-content clearfix content-mobile">
             <p>{{ post.body|safe }}</p>
         </div>
     </article>

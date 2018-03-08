@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block main %}
 <div class="underbar">
-  <b>热门精选:
+  <div class="bar-text">热门精选:</div>
 </div>
     {% for post in post_list %}
     <article class="post post-{{ post.pk }}">
@@ -19,7 +19,7 @@
             </div>
         </header>
         <div class="entry-content clearfix">
-            <p>{{ post.body|striptags|truncatewords_html:40 }}</p>
+            <p class="content-mobile">{{ post.body|striptags|truncatewords_html:40 }}</p>
             <div class="read-more cl-effect-14">
                 <a href="{{ post.get_absolute_url }}" class="more-link">继续阅读 <span class="meta-nav">→</span></a>
             </div>

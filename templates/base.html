@@ -3,28 +3,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Flappy Dragon</title>
+  <title>Flappy Dragon</title>
 
-    <!-- meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- css -->
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'blog/css/pace.css' %}">
-    <link rel="stylesheet" href="{% static 'blog/css/custom.css' %}">
-    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Caveat:700|Architects+Daughter|Bad+Script|Covered+By+Your+Grace" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'blog/css/pace.css' %}">
+  <link rel="stylesheet" href="{% static 'blog/css/custom.css' %}">
+  <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat:700|Architects+Daughter|Bad+Script|Covered+By+Your+Grace" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="{% static 'blog/css/pagination.css' %}"> -->
+  <!-- <link rel="stylesheet" href="{% static 'blog/css/pagination.css' %}"> -->
 
 
-    <!-- js -->
-    <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="{% static 'blog/js/pace.min.js' %}"></script>
-    <script src="{% static 'blog/js/modernizr.custom.js' %}"></script>
+  <!-- js -->
+  <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="{% static 'blog/js/pace.min.js' %}"></script>
+  <script src="{% static 'blog/js/modernizr.custom.js' %}"></script>
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    console.log(x.className)
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -38,124 +49,133 @@
     <li class="navfirst-li" style="float:right"><a class="nfa" href="">注册</a></li>
     <li class="navfirst-li" style="float:right"><a class="nfa" href="">登录</a></li>
   </ul>
+  <div class="topnav" id="myTopnav">
+    <a href="/" class="active">首页</a>
+    <a href="http://dabaitudiu.github.io">博客</a>
+    <a href="#login">登录</a>
+    <a href="#signup">注册</a>
+    <a href="http://github.com/dabaitudiu">联系</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
   <div class="container-fluid">
-      <!-- <header id="site-header"> -->
-          <div class="row gg">
-              <div class="col-md-9 col-sm-5 col-xs-8">
-                  <div class="logo-box">
-                    <p class="logo-font">Flappy Dragon~</p>
-                  </div>
-              </div><!-- col-md-4 -->
-              <div class="col-md-3 col-sm-7 col-xs-4">
-                <div class="search bar3">
-                  <form class="bar3-form">
-                    <input class="bar3-input" type="text" placeholder="请输入您要搜索的内容...">
-                    <button class="bar3-button" type="submit"></button>
-                  </form>
-                </div>
-              </div><!-- col-md-8 -->
-          </div>
-      <!-- </header> -->
-        <div class="mybar"></div>
+    <!-- <header id="site-header"> -->
+    <div class="row gg mobilerow">
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="logo-box">
+          <p class="logo-font">Flappy Dragon~</p>
+        </div>
+      </div><!-- col-md-4 -->
+      <!-- col-md-8 -->
+      <div class="col-md-3 col-sm-3 col-xs-6" style="float:right">
+        <div class="search bar3">
+          <form class="bar3-form">
+            <input class="bar3-input form-control" type="text" placeholder="请输入要搜索的内容...">
+            <button class="bar3-button" type="submit"></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- </header> -->
+    <div class="mybar"></div>
 
   </div>
-<div class="content-body">
+  <div class="content-body">
     <div class="container-fluid">
-        <div class="row gg-2">
-            <main class="col-md-9">
-                {% block main %}
-                {% endblock main %}
-            </main>
-            <aside class="col-md-3">
-              <div class="widget widget-recent-posts gg-4">
-                  <h3 class="widget-title">最新文章</h3>
-                  {% get_recent_posts as recent_post_list %}
-                  <ul>
-                    {% for post in recent_post_list %}
-                    <li>
-                      <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-                    </li>
-                    {% empty %}
-                    暂无文章╮(╯_╰)╭
-                    {% endfor %}
-                  </ul>
-              </div>
-              <div class="widget widget-archives gg-4">
-                  <h3 class="widget-title">归档</h3>
-                  {% archives as date_list %}
-                  <ul>
-                    {% for date in date_list %}
-                    <li>
-                      <a href="{% url 'blog:archives' date.year date.month %}">{{ date.year }} 年 {{ date.month }} 月</a>
-                    </li>
-                    {% empty %}
-                    暂无归档！
-                    {% endfor %}
-                  </ul>
-              </div>
+      <div class="row gg-2">
+        <main class="col-md-9">
+          {% block main %}
+          {% endblock main %}
+        </main>
+        <aside class="col-md-3">
+          <div class="widget widget-recent-posts gg-4">
+            <h3 class="widget-title">最新文章</h3>
+            {% get_recent_posts as recent_post_list %}
+            <ul>
+              {% for post in recent_post_list %}
+              <li>
+                <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+              </li>
+              {% empty %}
+              暂无文章╮(╯_╰)╭
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="widget widget-archives gg-4">
+            <h3 class="widget-title">归档</h3>
+            {% archives as date_list %}
+            <ul>
+              {% for date in date_list %}
+              <li>
+                <a href="{% url 'blog:archives' date.year date.month %}">{{ date.year }} 年 {{ date.month }} 月</a>
+              </li>
+              {% empty %}
+              暂无归档！
+              {% endfor %}
+            </ul>
+          </div>
 
-              <div class="widget widget-category gg-4">
-                  <h3 class="widget-title">分类</h3>
-                  {% get_categores as category_list %}
-                  <ul>
-                    {% for category in category_list %}
-                    <li>
-                      <a href="{% url 'blog:category' category.pk %}">{{ category.name }}
-                        <span class="post-count">({{ category.num_posts }})</span></a>
-                    </li>
-                    {% empty %}
-                    暂无分类！
-                    {% endfor %}
-                  </ul>
-              </div>
+          <div class="widget widget-category gg-4">
+            <h3 class="widget-title">分类</h3>
+            {% get_categores as category_list %}
+            <ul>
+              {% for category in category_list %}
+              <li>
+                <a href="{% url 'blog:category' category.pk %}">{{ category.name }}
+                  <span class="post-count">({{ category.num_posts }})</span></a>
+                </li>
+                {% empty %}
+                暂无分类！
+                {% endfor %}
+              </ul>
+            </div>
 
-              <div class="widget widget-tag-cloud gg-4">
-                  <h3 class="widget-title">标签云</h3>
-                  {% get_tags as tag_list %}
-                  <ul>
-                    {% for tag in tag_list %}
-                    <li>
-                      <a href="{% url 'blog:tag' tag.pk %}">{{ tag.name }}
-                        <span class="post-count">({{ tag.num_posts }})</span></a>
-                    </li>
-                    {% empty %}
-                    暂无分类！
-                    {% endfor %}
-                  </ul>
+            <div class="widget widget-tag-cloud gg-4">
+              <h3 class="widget-title">标签云</h3>
+              {% get_tags as tag_list %}
+              <ul>
+                {% for tag in tag_list %}
+                <li>
+                  <a href="{% url 'blog:tag' tag.pk %}">{{ tag.name }}
+                    <span class="post-count">({{ tag.num_posts }})</span></a>
+                  </li>
+                  {% empty %}
+                  暂无分类！
+                  {% endfor %}
+                </ul>
               </div>
               <div class="rss gg-4">
-                  <a href=""><span class="ion-social-rss-outline"></span> RSS 订阅</a>
+                <a href=""><span class="ion-social-rss-outline"></span> RSS 订阅</a>
               </div>
             </aside>
+          </div>
         </div>
-    </div>
-</div>
-<footer id="site-footer">
-    <div class="container">
-        <div class="row">
+      </div>
+      <footer id="site-footer">
+        <div class="container">
+          <div class="row">
             <div class="col-md-12">
-                <p class="copyright">&copy 2018 -Li Zhenhan bigbroase@163.com
-                    - 由<a href="http://zmrenwu.com/" title="网页模板" target="_blank">追梦人物的博客</a>修改
-                </p>
+              <p class="copyright">&copy 2018 -Li Zhenhan bigbroase@163.com
+                - 由<a href="http://zmrenwu.com/" title="网页模板" target="_blank">追梦人物的博客</a>修改
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-</footer>
+      </footer>
 
-<!-- Mobile Menu -->
-<div class="overlay overlay-hugeinc">
-    <button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
-    <nav>
-        <ul>
+      <!-- Mobile Menu -->
+      <div class="overlay overlay-hugeinc">
+        <button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+        <nav>
+          <ul>
             <li><a href="/">首页</a></li>
             <li><a href="http://dabaitudiu.github.io">博客</a></li>
             <li><a href="http://github.com/dabaitudiu">关于</a></li>
             <li><a href="http://github.com/dabaitudiu">联系</a></li>
-        </ul>
-    </nav>
-</div>
+          </ul>
+        </nav>
+      </div>
 
-<script src="{% static 'blog/js/script.js' %}"></script>
+      <script src="{% static 'blog/js/script.js' %}"></script>
 
-</body>
-</html>
+    </body>
+    </html>
