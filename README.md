@@ -3,7 +3,6 @@
 
 [![Django](https://img.shields.io/badge/django-v1.10.x-green.svg)](https://www.djangoproject.com/)
 [![Python](https://img.shields.io/badge/python-3.5%2B-yellow.svg)](https://www.python.org/)
-[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 [![Bar](http://progressed.io/bar/30?title=progress)](https://www.python.org/)
 
 * 第三次更新：更新阅读量，摘要.
