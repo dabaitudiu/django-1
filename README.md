@@ -1,5 +1,5 @@
 # django-1
-参考[追梦人物的博客](https://www.zmrenwu.com/post/3/)和豆瓣简书的网站练习。
+Reference: [追梦人物的博客](https://www.zmrenwu.com/post/3/)
 
 [![Django](https://img.shields.io/badge/django-v1.10.x-green.svg)](https://www.djangoproject.com/)
 [![Python](https://img.shields.io/badge/python-3.5%2B-yellow.svg)](https://www.python.org/)
