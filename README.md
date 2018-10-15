@@ -1,4 +1,4 @@
-# django-1
+# Blog using Django
 Reference: [追梦人物的博客](https://www.zmrenwu.com/post/3/)
 
 [![Django](https://img.shields.io/badge/django-v1.10.x-green.svg)](https://www.djangoproject.com/)
