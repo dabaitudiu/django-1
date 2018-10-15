@@ -11,3 +11,6 @@ Reference: [追梦人物的博客](https://www.zmrenwu.com/post/3/)
  实例: [www.flappydragon.com](www.flappydragon.com)   
  
 ![Sample](https://raw.githubusercontent.com/dabaitudiu/django-1/master/webpage.png)
+
+评论区：   
+![Sample2](https://raw.githubusercontent.com/dabaitudiu/django-1/master/comment.png)
