@@ -8,7 +8,7 @@ Reference: [追梦人物的博客](https://www.zmrenwu.com/post/3/)
 * 第三次更新：更新阅读量，摘要.
 * 2018/3/8：优化移动端(按钮，排版).   
    
- 实例: [www.flappydragon.com](www.flappydragon.com)   
+ 实例: [www.flappydragon.com](http://flappydragon.com)   
  
 ![Sample](https://raw.githubusercontent.com/dabaitudiu/django-1/master/webpage.png)
 
